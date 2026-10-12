@@ -118,7 +118,7 @@ flowchart LR
 | 6 | Поиск уязвимостей (Vulnerability Detection) | встроенный модуль | — | — | план |
 | 7 | Проверка конфигурации по CIS (SCA) | встроенный модуль | — | — | план |
 
-Разборы лежат в папке scenarios/.
+У каждой атаки своя папка в scenarios/: разбор, runbook и скриншоты лежат вместе. Первый разбор: [scenarios/01-ssh-bruteforce](scenarios/01-ssh-bruteforce/README.md).
 
 ---
 
@@ -155,17 +155,20 @@ flowchart LR
 
 ```
 soc-lab/
-├── README.md                 # обзор проекта
+├── README.md                    # обзор проекта
 ├── docs/
-│   ├── deployment.md         # развёртывание стенда
-│   └── log-collection.md     # настройка сбора логов
+│   ├── deployment.md            # развёртывание стенда
+│   ├── log-collection.md        # настройка сбора логов
+│   └── screenshots/             # скриншоты настройки VirtualBox
 ├── scenarios/
-│   ├── 01-ssh-bruteforce.md  # разбор сценария 1
-│   └── _template.md          # шаблон для остальных
+│   ├── 01-ssh-bruteforce/       # атака 1: брутфорс SSH
+│   │   ├── README.md            # разбор
+│   │   ├── runbook.md           # порядок прогона
+│   │   └── screenshots/
+│   └── _template.md             # шаблон для следующих атак
 ├── rules/
-│   └── local_rules.xml       # собственные правила (пока пусто)
-├── configs/                  # конфиги стенда
-└── screenshots/              # скриншоты дашборда и алертов
+│   └── local_rules.xml          # собственные правила (пока пусто)
+└── configs/                     # конфиги стенда
 ```
 
 В репозитории нет паролей и токенов. Если буду выкладывать конфиги, секреты в

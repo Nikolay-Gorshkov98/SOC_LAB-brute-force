@@ -17,27 +17,27 @@ Host-Only (для взаимодействия внутри стенда).
 
 ### SOC_LAB (сервер Wazuh)
 
-![Общие настройки SOC_LAB](../screenshots/vbox-soclab-general.png)
+![Общие настройки SOC_LAB](screenshots/vbox-soclab-general.png)
 
 Рисунок 1 — Параметры виртуальной машины SOC_LAB
 
 Машина создана как Ubuntu (64-bit). Второй сетевой адаптер переведён в режим
 виртуального адаптера хоста.
 
-![Сетевой адаптер SOC_LAB](../screenshots/vbox-soclab-network.png)
+![Сетевой адаптер SOC_LAB](screenshots/vbox-soclab-network.png)
 
 Рисунок 2 — Настройка Host-Only адаптера сервера
 
 ### Kali Linux (атакующая машина)
 
-![Общие настройки Kali](../screenshots/vbox-kali-general.png)
+![Общие настройки Kali](screenshots/vbox-kali-general.png)
 
 Рисунок 3 — Параметры виртуальной машины Kali Linux
 
 У Kali точно так же включён второй адаптер в ту же сеть Host-Only, что и у сервера.
 Благодаря этому обе машины оказываются в одной подсети.
 
-![Сетевой адаптер Kali](../screenshots/vbox-kali-network.png)
+![Сетевой адаптер Kali](screenshots/vbox-kali-network.png)
 
 Рисунок 4 — Настройка Host-Only адаптера Kali
 
@@ -46,7 +46,7 @@ Host-Only (для взаимодействия внутри стенда).
 На сервере установлена Ubuntu Server 26.04.1 LTS, поверх неё — Wazuh 4.14.8 в
 варианте «всё в одном» (Manager + Indexer + Dashboard).
 
-![Консоль сервера Ubuntu](../screenshots/ubuntu-console-version.png)
+![Консоль сервера Ubuntu](screenshots/ubuntu-console-version.png)
 
 Рисунок 5 — Консоль сервера после загрузки (Ubuntu 26.04.1 LTS)
 
